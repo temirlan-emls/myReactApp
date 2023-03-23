@@ -2,7 +2,7 @@ import axios from 'axios';
 import './style.css';
 import { useEffect, useState } from 'react';
 
-export default function AddUser() {
+export default function AddUserPage() {
   const [allUsers, setAllUsers] = useState();
 
   const getAllUsers = () => {
