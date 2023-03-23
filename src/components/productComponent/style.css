@@ -1,0 +1,11 @@
+.firstComponent {
+  width: 10em;
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2em 3em;
+  border: 1px solid gray;
+}
