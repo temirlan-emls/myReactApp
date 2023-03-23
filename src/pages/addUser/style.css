@@ -1,0 +1,22 @@
+.addUserWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.postForm {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.usersList {
+  margin-top: 4em;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.userItem {
+  text-align: center;
+  border: 1px solid grey;
+}
