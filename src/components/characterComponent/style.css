@@ -1,0 +1,16 @@
+.firstComponent {
+  width: 10em;
+  min-height: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 2em 3em;
+  border: 1px solid gray;
+}
+
+.firstComponent img{
+  width: 90%;
+}
