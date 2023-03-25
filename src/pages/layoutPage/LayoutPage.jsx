@@ -7,7 +7,9 @@ export default function LayoutPage() {
     <div className='layout'>
       <nav className='navbar'>
         <NavLink to={'/'}>HOME</NavLink>
-        <NavLink to={'/adduser'}>Add User</NavLink>
+        <NavLink to={'/addUser'}>Add User</NavLink>
+        <NavLink to={'/posts'}>Posts</NavLink>
+        <NavLink to={'/createPosts'}>Create Posts</NavLink>
       </nav>
       <Outlet />
     </div>

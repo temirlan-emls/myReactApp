@@ -17,33 +17,41 @@ export default function AddUserPage() {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    let newUser = {
-      userName: event.target.username.value,
-      password: event.target.password.value,
-      creator: 'admin',
-      activeStatus: true,
-      isClosedProfile: false,
-      avatarURL: 'https://avatars.githubusercontent.com/u/47022046?v=4',
-      about: 'demo about',
-      description: 'demo desc',
-      age: 999,
-      country: 'Kz',
-      city: 'Almaty',
-      gender: 'Male',
-      arrayOfFollowers: [],
-      arrayOfFollowing: [],
-      arrayOfPosts: [],
-    };
-
-    axios
-      .post('http://cepbep.ddns.net:1500/api/users/addUser', newUser, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-      .then((res) => {
-        getAllUsers();
-      });
+    let newUser = {};
+    if (event.target.username.value !== '') {
+      newUser = {
+        userName: event.target.username.value,
+        password: event.target.password.value,
+        creator: 'admin',
+        activeStatus: true,
+        isClosedProfile: false,
+        avatarURL: 'https://avatars.githubusercontent.com/u/47022046?v=4',
+        about: 'demo about',
+        description: 'demo desc',
+        age: 999,
+        country: 'Kz',
+        city: 'Almaty',
+        gender: 'Male',
+        arrayOfFollowers: [],
+        arrayOfFollowing: [],
+        arrayOfPosts: [],
+      };
+      axios
+        .post('http://cepbep.ddns.net:1500/api/users/addUser', newUser, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+        .then((res) => {
+          getAllUsers();
+          console.log(res);
+          localStorage.setItem('id', JSON.stringify(res.data._id), {
+            sameSite: 'strict',
+            secure: true,
+          });
+          window.dispatchEvent(new Event('storage'));
+        });
+    }
   };
 
   return (

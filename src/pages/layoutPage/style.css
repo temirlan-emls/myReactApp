@@ -14,3 +14,14 @@
   justify-content: space-around;
   background-color: rgb(246, 255, 149);
 }
+.activeUser {
+  width: 100%;
+  text-align: center;
+  background-color: red;
+  color: white;
+  font-weight: 900;
+  padding: 0.5em 0;
+}
+.hidden {
+  display:none
+}

@@ -1,0 +1,28 @@
+.newPostWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.postPostForm {
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.postsList {
+  margin-top: 4em;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.postItem {
+  border: 1px solid grey;
+}
+.postItem p {
+  text-align: center;
+}
+.postItem h5 {
+  margin-left: 0.5em;
+}
